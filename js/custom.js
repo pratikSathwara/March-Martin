@@ -1,3 +1,22 @@
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+$('.menu li a').click(function () {
+  $('#myNav').css("height", "0%");
+
+});
+        $(document).ready(function() {
+        $(".tab").click(function () {
+            $(".menu li").removeClass("active");
+            $(this).addClass("active");   
+        });
+        });
+        
  $('.count').each(function () {
            $(this).prop('Counter',0).animate({
                Counter: $(this).text()
@@ -72,3 +91,33 @@ $(window).scroll(function(){
            $('#navbar-close').toggleClass('hidden');  
          });
    });
+
+
+AOS.init();
+AOS.init({
+  duration: 1500,
+  once: true,
+  easing: 'linear',
+  disable: 'mobile',
+});
+$('.owl-one').owlCarousel({
+             
+             loop:true,
+             nav:true,
+            dots: false,
+             items:1,
+             margin:30,
+             stagePadding:30,
+             smartSpeed:450
+});
+         
+$('.owl-two').owlCarousel({
+             items:1,
+             margin:30,
+             padding:30,
+             stagePadding:30,
+             smartSpeed:450,
+             loop:true,
+             nav:false,
+             dots: true
+});

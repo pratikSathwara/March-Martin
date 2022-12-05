@@ -1,0 +1,103 @@
+.welcome_section{
+  // background-color: #ccc;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+  @include tab-view{
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+  height: 100%;
+  .img_box{
+    max-width: 583px;
+    min-height: 457px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include tab-view{
+      width: 100%;
+      align-self: center;
+      min-height: 100%;
+      margin-bottom: 20px;
+    }
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      @include tab-view{
+      border-radius: 10px;
+    }
+  }
+  }
+  .textbox{
+    max-width: 670px;
+    position: relative;
+    padding-left:40px ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include tab-view{
+      width: 100%;
+      padding-left: 0;
+      margin: 0 auto;
+    }
+    .innder_box{
+      padding: 20px;
+      border-radius: 5px;
+      // margin-bottom: 5px;
+      max-width: 626px;
+      @include mobile-view{
+        padding: 10px;
+      }
+    h2{
+      font-size: 24px;
+      margin-bottom: 7px;
+      @include mobile-view{
+        font-size: 18px;
+      }
+    }
+    p{
+      font-size: 16px;
+      margin-bottom: 0;
+      @include mobile-view{
+        font-size: 14px;
+      }
+    }
+  }
+  .v1{
+    box-shadow: 0 0 10px #ddd;
+    background-color: #fff;
+    @include ipad-view{
+      display: none;
+    }
+    @include tab-view{
+      display: block;
+    }
+  }
+  }
+}
+
+<div class="welcome_section">
+      <div class="img_box">
+         <img src="./assets/image/188379031.png" alt="">
+      </div>
+      <div class="textbox">
+         <div class="innder_box">
+            <h2>Highlighting Areas for Improvement</h2>
+            <p>Real time data visualization and financial analysis to determine the areas that requires improvement and stay prepared for the sudden changes.</p>
+         </div>
+         <div class="innder_box v1">
+            <h2>Highlighting Areas for Improvement</h2>
+            <p>Real time data visualization and financial analysis to determine the areas that requires improvement and stay prepared for the sudden changes.</p>
+         </div>
+         <div class="innder_box">
+            <h2>Highlighting Areas for Improvement</h2>
+            <p>Real time data visualization and financial analysis to determine the areas that requires improvement and stay prepared for the sudden changes.</p>
+         </div>
+      </div>
+   </div>
